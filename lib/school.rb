@@ -1,4 +1,3 @@
-# code here!
 class School
   attr_accessor :roster
   attr_reader :name
@@ -23,11 +22,6 @@ class School
   end
 
   def sort
-    sorted_roster = {}
-    sorted_grades = @roster.keys.sort
-      sorted_grades.each do |grade|
-      sorted_roster[grade] = @roster[grade].sort
-      end
-    sorted_roster
+  @roster.each {|grade, students| students.sort!}
   end
 end
